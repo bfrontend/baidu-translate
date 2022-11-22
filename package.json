@@ -1,0 +1,88 @@
+{
+  "name": "baidu-translate",
+  "displayName": "baidu-translate",
+  "description": "baidu translate source for comment-translate",
+  "version": "0.0.2",
+  "publisher": "webxmsj",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "translateSource",
+    "comment translate",
+    "baidu",
+    "baidu translate",
+    "翻译",
+    "注释",
+    "翻訳"
+  ],
+  "homepage": "https://github.com/webxmsj/baidu-translate#readme",
+  "bugs": {
+    "url": "https://github.com/webxmsj/baidu-translate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webxmsj/baidu-translate.git"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "icon": "image/logo.png",
+  "extensionDependencies": [
+    "intellsmi.comment-translate"
+  ],
+  "contributes": {
+    "configuration": [
+      {
+        "title": "Baidu translate Configuration",
+        "type": "Object",
+        "properties": {
+          "baiduTranslate.appId": {
+            "type": "string",
+            "description": "app id"
+          },
+          "baiduTranslate.appKey": {
+            "type": "string",
+            "description": "appKey"
+          }
+        }
+      }
+    ],
+    "translates": [
+      {
+        "translate": "baidu",
+        "title": "Baidu translate"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.63.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@vscode/test-electron": "^1.6.2",
+    "eslint": "^8.1.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "axios": "^1.1.3",
+    "comment-translate-manager": "^0.0.2",
+    "got": "^12.5.3",
+    "node-fetch": "^3.3.0",
+    "querystring": "^0.2.1"
+  }
+}
