@@ -1,6 +1,7 @@
 # baidu-translate README
 
 The plugin provides a translation source for the ‘comment-translate’ plugin. Itself does not activate, it starts when enabled is selected.
+test
 
 ## Features
 
