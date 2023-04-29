@@ -2,7 +2,7 @@
   "name": "baidu-translate",
   "displayName": "baidu-translate",
   "description": "baidu translate source for comment-translate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "webxmsj",
   "engines": {
     "vscode": "^1.63.0"
