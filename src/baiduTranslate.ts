@@ -41,6 +41,7 @@ interface BaiduTranslateOption {
 interface Response {
     form: string;
     to: string;
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     trans_result: {
         src: string;
         dst: string
