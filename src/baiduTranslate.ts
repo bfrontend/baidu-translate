@@ -116,7 +116,11 @@ export class BaiduTranslate implements ITranslate {
     let res = await sendRequest<Response>(
       `${url}?${querystring.stringify(data)}`
     );
-    return res.trans_result[0].dst;
+    // Fix #3
+    // support multi-line translation results
+    // concat all the translation result with '\n'
+    const result = res.trans_result.map(({ dst }) => dst).join('\n');
+    return result;
   }
 
   link(content: string, { to = "auto", from = "auto" }: ITranslateOptions) {
